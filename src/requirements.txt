@@ -1,0 +1,9 @@
+Django
+Pillow
+djangorestframework
+djangorestframework-simplejwt
+django-filter
+drf-yasg
+django-extensions
+django-cors-headers
+python-dotenv==0.19.1
