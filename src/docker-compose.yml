@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  web:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: sim_erp_project
+    command: /start
+    volumes:
+      - .:/app
+      - erp_static_volume:/app/static
+      # - erp_media_volume:/app/media
+    expose:
+      - 9000
+    network_mode: "host"
+
+  # asgi_web:
+  #   restart: always
+  #   build:
+  #     context: .
+  #     dockerfile: ./Dockerfile
+  #   command: /asgi_start
+  #   volumes:
+  #     - .:/app
+  #   expose:
+  #     - 9900
+  #   network_mode: "host"
+
+volumes:
+  erp_static_volume:
+  # erp_media_volume:
