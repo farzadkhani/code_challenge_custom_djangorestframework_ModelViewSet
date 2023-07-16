@@ -6,28 +6,13 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: sim_erp_project
+    image: web
     command: /start
     volumes:
       - .:/app
-      - erp_static_volume:/app/static
-      # - erp_media_volume:/app/media
+      # - web_static_volume:/app/static
     expose:
-      - 9000
-    network_mode: "host"
+      - 8000
 
-  # asgi_web:
-  #   restart: always
-  #   build:
-  #     context: .
-  #     dockerfile: ./Dockerfile
-  #   command: /asgi_start
-  #   volumes:
-  #     - .:/app
-  #   expose:
-  #     - 9900
-  #   network_mode: "host"
-
-volumes:
-  erp_static_volume:
-  # erp_media_volume:
+  # volumes:
+  #   web_static_volume:
