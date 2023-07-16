@@ -1,4 +1,4 @@
-# Code Challenge/custom drf and ModelViewSet
+# Code Challenge/DRF-custom User and ModelViewSet
 this project is code changllenge for create custom User model and customize permision_class and serializer_class in ModelViewSet by drf
 i use jwt for autentication.
 
