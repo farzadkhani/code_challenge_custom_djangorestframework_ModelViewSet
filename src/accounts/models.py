@@ -68,10 +68,23 @@ class User(AbstractBaseUser, PermissionsMixin, ModelMixin):
         error_messages={
             "unique": _("A user with that cell phone already exists."),
         },
+        db_index=True,
     )
-    email = models.EmailField(verbose_name="email address", unique=True)
-    first_name = models.CharField(max_length=150, blank=True)
-    last_name = models.CharField(max_length=150, blank=True)
+    email = models.EmailField(
+        verbose_name="email address",
+        unique=True,
+        db_index=True,
+    )
+    first_name = models.CharField(
+        max_length=150,
+        blank=True,
+        db_index=True,
+    )
+    last_name = models.CharField(
+        max_length=150,
+        blank=True,
+        db_index=True,
+    )
     is_staff = models.BooleanField(
         _("staff status"),
         default=False,
