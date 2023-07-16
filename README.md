@@ -23,9 +23,9 @@ alternative way for run project:
   - docker compose -f docker-compose.yml up -d --build
 
 ## customize pagination
-default pagination is: limit=10 & offset=10
-you can customize pagination by change limit and offset
-  {{base_route}}:8000/accounts/users/?limit=5&offset=5
+- default pagination is: limit=10 & offset=10
+- you can customize pagination by change limit and offset
+- {{base_route}}:8000/accounts/users/?limit=5&offset=5
 
 ## apis info
 {{base_route}}:8000/swagger/schema/
