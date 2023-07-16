@@ -1,0 +1,13 @@
+<!-- templates/registration/login.html -->
+2
+<h2>Log In</h2>
+3
+<form method="post">
+4
+  {% csrf_token %}
+5
+  {{ form.as_p }}
+6
+  <button type="submit">Log In</button>
+7
+</form>
